@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 6,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 792.0, -744.0, 982.0, 707.0 ],
+		"rect" : [ 522.0, 206.0, 982.0, 634.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,54 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 323.0, 249.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "bang" ],
+					"patching_rect" : [ 398.0, 304.0, 47.0, 22.0 ],
+					"text" : "sfplay~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 398.0, 270.0, 75.0, 22.0 ],
+					"text" : "open, loop 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"patching_rect" : [ 390.0, 205.0, 67.0, 22.0 ],
+					"text" : "opendialog"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "preset",
@@ -224,7 +272,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 768.0, 264.0, 44.0, 22.0 ],
+					"patching_rect" : [ 460.0, 204.0, 44.0, 22.0 ],
 					"text" : "noise~"
 				}
 
@@ -277,7 +325,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 224.0, 237.0, 85.0, 22.0 ],
+					"patching_rect" : [ 191.5, 224.0, 85.0, 22.0 ],
 					"text" : "prepend open"
 				}
 
@@ -295,7 +343,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 224.0, 204.0, 142.0, 22.0 ],
+					"patching_rect" : [ 149.0, 189.0, 142.0, 22.0 ],
 					"prefix_mode" : 2
 				}
 
@@ -317,7 +365,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frozen_object_attributes" : 					{
-						"audiofile" : "vs_harp_riff.wav"
+						"audiofile" : ""
 					}
 ,
 					"id" : "obj-56",
@@ -364,6 +412,20 @@
 					"destination" : [ "obj-22", 0 ],
 					"order" : 0,
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -427,13 +489,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-56", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-56", 0 ],
 					"source" : [ "obj-58", 0 ]
 				}
@@ -442,7 +497,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-71", 0 ],
-					"midpoints" : [ 295.0, 230.5, 233.5, 230.5 ],
+					"midpoints" : [ 220.0, 230.5, 201.0, 230.5 ],
 					"source" : [ "obj-70", 1 ]
 				}
 
@@ -484,6 +539,13 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
  ],
 		"parameters" : 		{
 			"obj-2" : [ "live.gain~", "live.gain~", 0 ],
@@ -501,7 +563,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "fft_forbidden.maxpat",
-				"bootpath" : "~/Dropbox/My Mac (MBP-di-Maurizio.homenet.telecomitalia.it)/Desktop/FFT Webinar",
+				"bootpath" : "~/OneDrive/School/MusicAndTech/FinalProject/Music159_Tools/max/spectral_transformations",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

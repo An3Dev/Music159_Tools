@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 6,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 792.0, -744.0, 874.0, 707.0 ],
+		"rect" : [ 134.0, 134.0, 874.0, 707.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,30 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 146.0, 123.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 232.0, 145.0, 75.0, 22.0 ],
+					"text" : "open, loop 1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-24",
 					"maxclass" : "number",
@@ -127,18 +151,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-20",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 495.0, 226.0, 44.0, 22.0 ],
-					"text" : "noise~"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -181,7 +193,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 334.0, 285.0, 43.0, 22.0 ],
+					"patching_rect" : [ 444.0, 198.0, 43.0, 22.0 ],
 					"text" : "loop 1"
 				}
 
@@ -195,7 +207,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "bang" ],
-					"patching_rect" : [ 298.0, 246.0, 55.0, 22.0 ],
+					"patching_rect" : [ 408.0, 159.0, 55.0, 22.0 ],
 					"text" : "t 1 l b"
 				}
 
@@ -209,7 +221,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 298.0, 218.0, 85.0, 22.0 ],
+					"patching_rect" : [ 408.0, 131.0, 85.0, 22.0 ],
 					"text" : "prepend open"
 				}
 
@@ -227,7 +239,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 298.0, 185.0, 142.0, 22.0 ],
+					"patching_rect" : [ 439.0, 37.0, 142.0, 22.0 ],
 					"prefix_mode" : 2
 				}
 
@@ -240,7 +252,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 298.0, 282.0, 20.0, 20.0 ]
+					"patching_rect" : [ 414.0, 188.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -249,7 +261,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frozen_object_attributes" : 					{
-						"audiofile" : "vs_harp_riff.wav"
+						"audiofile" : ""
 					}
 ,
 					"id" : "obj-56",
@@ -257,7 +269,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "bang" ],
-					"patching_rect" : [ 298.0, 314.0, 49.0, 22.0 ],
+					"patching_rect" : [ 362.0, 247.0, 49.0, 22.0 ],
 					"text" : "sfplay~"
 				}
 
@@ -324,8 +336,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-20", 0 ]
+					"destination" : [ "obj-56", 0 ],
+					"source" : [ "obj-15", 0 ]
 				}
 
 			}
@@ -366,15 +378,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-56", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-56", 0 ],
-					"source" : [ "obj-58", 0 ]
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-71", 0 ],
-					"midpoints" : [ 369.0, 211.5, 307.5, 211.5 ],
+					"midpoints" : [ 510.0, 124.5, 417.5, 124.5 ],
 					"source" : [ "obj-70", 1 ]
 				}
 
@@ -383,14 +402,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-72", 0 ],
 					"source" : [ "obj-71", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-56", 0 ],
-					"midpoints" : [ 325.5, 309.0, 307.5, 309.0 ],
-					"source" : [ "obj-72", 1 ]
 				}
 
 			}
@@ -405,14 +416,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-74", 0 ],
 					"source" : [ "obj-72", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-56", 0 ],
-					"midpoints" : [ 343.5, 309.0, 307.5, 309.0 ],
-					"source" : [ "obj-74", 0 ]
 				}
 
 			}
@@ -433,7 +436,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "fft_probability.maxpat",
-				"bootpath" : "~/Dropbox/My Mac (MBP-di-Maurizio.homenet.telecomitalia.it)/Desktop/FFT Webinar",
+				"bootpath" : "~/OneDrive/School/MusicAndTech/FinalProject/Music159_Tools/max/spectral_transformations",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
