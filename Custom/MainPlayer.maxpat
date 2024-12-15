@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-135",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 496.552609801292419, 167.0, 150.0, 62.0 ],
+					"text" : "This sets recording length to length of buffer if we're using a recording rather than adc recording"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-132",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -57,7 +69,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 501.0, 251.0, 98.0, 22.0 ],
+					"patching_rect" : [ 461.421044230461121, 355.0, 98.0, 22.0 ],
 					"text" : "receive loopBuf1"
 				}
 
@@ -116,7 +128,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 471.552609801292419, 79.0, 24.0, 24.0 ]
+					"patching_rect" : [ 465.921044230461121, 154.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -127,7 +139,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 458.552609801292419, 143.0, 32.0, 22.0 ],
+					"patching_rect" : [ 452.921044230461121, 218.0, 32.0, 22.0 ],
 					"text" : "gate"
 				}
 
@@ -140,7 +152,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 453.552609801292419, 111.0, 24.0, 24.0 ]
+					"patching_rect" : [ 447.921044230461121, 186.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -150,8 +162,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 458.552609801292419, 173.0, 88.0, 22.0 ],
-					"text" : "send bufferLen"
+					"patching_rect" : [ 452.921044230461121, 248.0, 115.0, 22.0 ],
+					"text" : "send recording1Len"
 				}
 
 			}
@@ -712,7 +724,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1052.0, 428.0, 111.0, 22.0 ],
-					"text" : "0.007064"
+					"text" : "0.005627"
 				}
 
 			}
@@ -969,7 +981,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 362.5, 236.0, 128.0, 22.0 ],
+					"patching_rect" : [ 323.421044230461121, 340.0, 128.0, 22.0 ],
 					"text" : "receive stopRecording"
 				}
 
@@ -988,13 +1000,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-65",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 404.0, 288.0, 29.5, 36.0 ],
-					"text" : "bang"
+					"patching_rect" : [ 364.421044230461121, 392.0, 29.5, 22.0 ],
+					"text" : "0"
 				}
 
 			}
@@ -2016,7 +2027,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 291.0, 236.0, 47.0, 22.0 ],
+					"patching_rect" : [ 251.421044230461121, 340.0, 47.0, 22.0 ],
 					"text" : "r scrub"
 				}
 
@@ -2030,7 +2041,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 291.0, 275.0, 50.0, 22.0 ]
+					"patching_rect" : [ 251.421044230461121, 379.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -2364,7 +2375,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-108", 0 ],
-					"midpoints" : [ 468.052609801292419, 163.0, 437.742370902105847, 163.0, 437.742370902105847, 107.800000000000011, 463.052609801292419, 107.800000000000011 ],
+					"midpoints" : [ 462.421044230461121, 238.0, 432.110805331274605, 238.0, 432.110805331274605, 182.800000000000011, 457.421044230461121, 182.800000000000011 ],
 					"order" : 1,
 					"source" : [ "obj-109", 0 ]
 				}
@@ -2446,7 +2457,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-65", 1 ],
+					"destination" : [ "obj-65", 0 ],
 					"source" : [ "obj-126", 0 ]
 				}
 
@@ -3394,13 +3405,13 @@
  ],
 		"autosave" : 0,
 		"boxgroups" : [ 			{
-				"boxes" : [ "obj-102", "obj-109", "obj-108", "obj-112" ]
-			}
-, 			{
 				"boxes" : [ "obj-52", "obj-2", "obj-14", "obj-8", "obj-37", "obj-20", "obj-35", "obj-34", "obj-32", "obj-23", "obj-69", "obj-182", "obj-179", "obj-81", "obj-180", "obj-164", "obj-177", "obj-176", "obj-15", "obj-54" ]
 			}
 , 			{
 				"boxes" : [ "obj-121", "obj-119", "obj-100", "obj-123", "obj-98", "obj-204", "obj-113", "obj-97", "obj-118", "obj-115", "obj-91", "obj-105", "obj-114", "obj-84" ]
+			}
+, 			{
+				"boxes" : [ "obj-102", "obj-109", "obj-108", "obj-112" ]
 			}
  ]
 	}
